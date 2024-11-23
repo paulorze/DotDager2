@@ -42,7 +42,7 @@ const Footer = ({handleNavigate}) => {
                                 }
                             }}
                         >
-                            <img src={LogoStatic} alt="Logo de DotDager" />
+                            <img src='../../assets/logo/LogoStatic.svg' alt="Logo de DotDager" />
                         </Box>
                     </Grid2>
                     <Grid2

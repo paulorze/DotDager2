@@ -24,7 +24,7 @@ const Navbar = ({handleNavigate, open, handleOpen, handleClose}) => {
                             className={"navbar__logo"}
                             onClick={()=>handleNavigate("/")}
                         >
-                            <img src={LogoStatic} alt="Logo de DotDager" />
+                            <img src={"../../assets/logo/LogoStatic.svg"} alt="Logo de DotDager" />
                         </Box>
                         <Box
                             sx={{
@@ -143,7 +143,7 @@ const Navbar = ({handleNavigate, open, handleOpen, handleClose}) => {
                         justifyContent={"flex-start"}
                         onClick={()=>{handleNavigate("/");handleClose();}}
                     >
-                        <img src={LogoStatic} alt="Logo de DotDager" />
+                        <img src={"../../assets/logo/LogoStatic.svg"} alt="Logo de DotDager" />
                     </Box>
                     <Box
                         onClick={handleClose}
