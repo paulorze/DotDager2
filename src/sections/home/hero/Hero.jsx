@@ -71,7 +71,7 @@ const Hero = () => {
                                     overflow: "hidden"
                                 }}
                             >
-                                <video
+                                {/* <video
                                     width={"100%"}
                                     height={"100%"}
                                     autoPlay
@@ -80,7 +80,7 @@ const Hero = () => {
                                     playsInline
                                 >
                                     <source src={'../../../assets/img/Dager.webm'} type="video/webm" />
-                                </video>
+                                </video> */}
                             </Box>
                         </Grid2>
                     </Grid2>
