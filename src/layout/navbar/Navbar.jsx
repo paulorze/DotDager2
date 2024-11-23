@@ -4,7 +4,7 @@ import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import CloseIcon from '@mui/icons-material/Close';
 import './Navbar.css';
 
-const Navbar = ({handleNavigate, open, handleOpen, handleClose}) => {
+const Navbar = ({es, handleNavigate, open, handleOpen, handleClose}) => {
     return (
         <>
             <AppBar
@@ -37,29 +37,29 @@ const Navbar = ({handleNavigate, open, handleOpen, handleClose}) => {
                             <Button
                                 variant="navbar"
                                 className="btn__underlined__animation"
-                                onClick={()=>handleNavigate("/")}
+                                onClick={es ? ()=>handleNavigate("/es") : ()=>handleNavigate("/")}
                             >
                                 <span
                                     className="span__underlined__animation"
                                 >
-                                    Home
+                                    {es ? 'Inicio' : 'Home'}
                                 </span>
                             </Button>
                             <Button
                                 variant="navbar"
                                 className="btn__underlined__animation"
-                                onClick={()=>handleNavigate("/#about")}
+                                onClick={es ? ()=>handleNavigate("/es#about") : ()=>handleNavigate("/#about")}
                             >
                                 <span
                                     className="span__underlined__animation"
                                 >
-                                    About
+                                    {es ? "Sobre Mí" : "About"}
                                 </span>
                             </Button>
                             <Button
                                 variant="navbar"
                                 className="btn__underlined__animation"
-                                onClick={()=>handleNavigate("/#youtube")}
+                                onClick={es ? ()=>handleNavigate("/es#youtube") : ()=>handleNavigate("/#youtube")}
                             >
                                 <span
                                     className="span__underlined__animation"
@@ -70,23 +70,23 @@ const Navbar = ({handleNavigate, open, handleOpen, handleClose}) => {
                             <Button
                                 variant="navbar"
                                 className="btn__underlined__animation"
-                                onClick={()=>handleNavigate("/#music")}
+                                onClick={es ? ()=>handleNavigate("/es#music") : ()=>handleNavigate("/#music")}
                             >
                                 <span
                                     className="span__underlined__animation"
                                 >
-                                    Music
+                                    {es ? "Música" : "Music"}
                                 </span>
                             </Button>
                             <Button
                                 variant="navbar"
                                 className="btn__underlined__animation"
-                                onClick={()=>handleNavigate("/#contact")}
+                                onClick={es ? ()=>handleNavigate("/es#contact") :()=>handleNavigate("/#contact")}
                             >
                                 <span
                                     className="span__underlined__animation"
                                 >
-                                    Contact
+                                    {es ? "Contacto" : "Contact"}
                                 </span>
                             </Button>
                         </Box>
@@ -141,9 +141,9 @@ const Navbar = ({handleNavigate, open, handleOpen, handleClose}) => {
                         flexDirection={"row"}
                         alignItems={"center"}
                         justifyContent={"flex-start"}
-                        onClick={()=>{handleNavigate("/");handleClose();}}
+                        onClick={es ? ()=>{handleNavigate("/es");handleClose();} : ()=>{handleNavigate("/");handleClose();}}
                     >
-                        <img src={"../../assets/logo/LogoStatic.svg"} alt="Logo de DotDager" />
+                        <img src={LogoStatic} alt="Logo de DotDager" />
                     </Box>
                     <Box
                         onClick={handleClose}
@@ -192,12 +192,12 @@ const Navbar = ({handleNavigate, open, handleOpen, handleClose}) => {
                             }}
                         >
                             <ListItemButton
-                                onClick={()=>{handleNavigate("/"); handleClose()}}
+                                onClick={es ? ()=>{handleNavigate("/es");handleClose();} : ()=>{handleNavigate("/"); handleClose()}}
                                 >
                                 <ListItemText
                                     color='primary'
                                     primaryTypographyProps={{fontSize: '16px', letterSpacing: "2px"}}
-                                    primary={'Home'}
+                                    primary={es ? "Inicio" : 'Home'}
                                 />
                             </ListItemButton>
                         </ListItem>
@@ -208,12 +208,12 @@ const Navbar = ({handleNavigate, open, handleOpen, handleClose}) => {
                             }}
                         >
                             <ListItemButton
-                                onClick={()=>{handleNavigate("/#about"); handleClose()}}
+                                onClick={es ? ()=>{handleNavigate("/es#about");handleClose();} : ()=>{handleNavigate("/#about"); handleClose()}}
                                 >
                                 <ListItemText
                                     color='primary'
                                     primaryTypographyProps={{fontSize: '16px', letterSpacing: "2px"}}
-                                    primary={'About'}
+                                    primary={es ? "Sobre Mí" : 'About'}
                                 />
                             </ListItemButton>
                         </ListItem>
@@ -224,7 +224,7 @@ const Navbar = ({handleNavigate, open, handleOpen, handleClose}) => {
                             }}
                         >
                             <ListItemButton
-                                onClick={()=>{handleNavigate("/#youtube"); handleClose()}}
+                                onClick={es ? ()=>{handleNavigate("/es#youtube");handleClose();} : ()=>{handleNavigate("/#youtube"); handleClose()}}
                                 >
                                 <ListItemText
                                     color='primary'
@@ -240,12 +240,12 @@ const Navbar = ({handleNavigate, open, handleOpen, handleClose}) => {
                             }}
                         >
                             <ListItemButton
-                                onClick={()=>{handleNavigate("/#music"); handleClose()}}
+                                onClick={es ? ()=>{handleNavigate("/es#music");handleClose();} : ()=>{handleNavigate("/#music"); handleClose()}}
                                 >
                                 <ListItemText
                                     color='primary'
                                     primaryTypographyProps={{fontSize: '16px', letterSpacing: "2px"}}
-                                    primary={'Music'}
+                                    primary={es? "Música" : 'Music'}
                                 />
                             </ListItemButton>
                         </ListItem>
@@ -256,12 +256,12 @@ const Navbar = ({handleNavigate, open, handleOpen, handleClose}) => {
                             }}
                         >
                             <ListItemButton
-                                onClick={()=>{handleNavigate("/#contact"); handleClose()}}
+                                onClick={es ? ()=>{handleNavigate("/es#contact");handleClose();} : ()=>{handleNavigate("/#contact"); handleClose()}}
                                 >
                                 <ListItemText
                                     color='primary'
                                     primaryTypographyProps={{fontSize: '16px', letterSpacing: "2px"}}
-                                    primary={'Contact'}
+                                    primary={es? "Contacto" : 'Contact'}
                                 />
                             </ListItemButton>
                         </ListItem>

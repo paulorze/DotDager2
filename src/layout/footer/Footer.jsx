@@ -4,7 +4,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
-const Footer = ({handleNavigate}) => {
+const Footer = ({es, handleNavigate}) => {
     return (
         <Paper
             component={"footer"}
@@ -63,32 +63,32 @@ const Footer = ({handleNavigate}) => {
                         >
                             <Button
                                 variant="navbar"
-                                onClick={()=>handleNavigate("/")}
+                                onClick={es ? ()=>handleNavigate("/es") : ()=>handleNavigate("/")}
                                 className="btn__underlined__animation"
                             >
                                 <span
                                     className="span__underlined__animation"
                                 >
-                                    Home
+                                    {es ? "Inicio" : "Home"}
                                 </span>
                             </Button>
                             <Button
                                 variant="navbar"
-                                onClick={()=>handleNavigate("/#about")}
+                                onClick={es ? ()=>handleNavigate("/es#about") : ()=>handleNavigate("/#about")}
                                 className="btn__underlined__animation"
                             >
-                                                                <span
+                                <span
                                     className="span__underlined__animation"
                                 >
-                                    About
+                                    {es ? "Sobre Mí" : "About"}
                                 </span>
                             </Button>
                             <Button
                                 variant="navbar"
-                                onClick={()=>handleNavigate("/#youtube")}
+                                onClick={es ? ()=>handleNavigate("/es#youtube") : ()=>handleNavigate("/#youtube")}
                                 className="btn__underlined__animation"
                             >
-                                                                <span
+                                <span
                                     className="span__underlined__animation"
                                 >
                                     YouTube
@@ -96,24 +96,24 @@ const Footer = ({handleNavigate}) => {
                             </Button>
                             <Button
                                 variant="navbar"
-                                onClick={()=>handleNavigate("/#music")}
-                                className="btn__underlined__animation"
-                            >
-                                                                <span
-                                    className="span__underlined__animation"
-                                >
-                                    Music
-                                </span>
-                            </Button>
-                            <Button
-                                variant="navbar"
-                                onClick={()=>handleNavigate("/#contact")}
+                                onClick={es ? ()=>handleNavigate("/es#music") : ()=>handleNavigate("/#music")}
                                 className="btn__underlined__animation"
                             >
                                 <span
                                     className="span__underlined__animation"
                                 >
-                                    Contact
+                                    {es ? "Música" : "Music"}
+                                </span>
+                            </Button>
+                            <Button
+                                variant="navbar"
+                                onClick={es ? ()=>handleNavigate("/es#contact") : ()=>handleNavigate("/#contact")}
+                                className="btn__underlined__animation"
+                            >
+                                <span
+                                    className="span__underlined__animation"
+                                >
+                                    {es ? "Contacto" : "Contact"}
                                 </span>
                             </Button>
                         </Box>
