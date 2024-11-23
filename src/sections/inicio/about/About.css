@@ -14,6 +14,7 @@
     width: 360px;
     height: 126px;
     position: absolute;
+    right: 0;
     bottom: 0;
     overflow: hidden;
 }
@@ -27,7 +28,7 @@
     width: 100px;
     height: 100px;
     bottom: 0;
-    right: 100px;
+    right: 110px;
 }
 
 .es_parallax_layer_menton {
@@ -39,5 +40,5 @@
     width: 64px;
     height: 70px;
     top: 0;
-    right: 130px;
+    right: 139px;
 }
