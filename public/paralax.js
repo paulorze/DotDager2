@@ -9,11 +9,17 @@ function castParallax() {
 			layer = layers[i];
 			speed = layer.getAttribute('data-speed');
 			var yPos = (top * speed / 100);
-			if (yPos >= 215) {
-				yPos = 215
+			if (layer.classList.contains("es_parallax_layer_menton")) {
+				if (yPos >= 30) {
+					yPos = 30
+				}
+            } else {
+				if (yPos >= 215) {
+					yPos = 215
+				}
 			}
 			layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
-
+			console.log(layer)
 		}
 	});
 }

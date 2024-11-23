@@ -51,12 +51,13 @@ const About = () => {
                             height: "400px"
                         }}
                     >
-                        <div id="fondo" ></div>
+                        <div id="es_fondo" ></div>
                         <div
-                            className='about_parallax'
+                            className='es_parallax'
                             id="parallax"
                         >
-                            <div className='about_parallax_layer parallax' id="layer_1" data-speed="20"></div>
+                            <div className='es_parallax_layer_menton parallax' id="layer_1" data-speed="2"></div>
+                            <div className='es_parallax_layer_pepino parallax' id="layer_1" data-speed="-7"></div>
                         </div>
                     </Grid2>
                 </Grid2>
