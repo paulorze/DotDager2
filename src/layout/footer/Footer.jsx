@@ -252,8 +252,12 @@ const Footer = ({es, handleNavigate}) => {
                         <Typography
                             variant="body2"
                             component={"a"}
-                            target="_blank"
-                            href="https://www.linkedin.com/in/agustin-rzeszut-318b0a25b/"
+                            onClick={()=>handleNavigate('/lumber')}
+                            sx={{
+                                "&:hover": {
+                                    cursor: "pointer"
+                                }
+                            }}
                         >
                             Hecho con ♥ por Agustin Rzeszut.
                         </Typography>

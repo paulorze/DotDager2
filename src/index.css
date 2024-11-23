@@ -69,6 +69,10 @@ a {
   background-repeat: no-repeat;
 }
 
+.lumber {
+  border: none;
+}
+
 
 @keyframes wiggle {
   0% {
